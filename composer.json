@@ -1,0 +1,40 @@
+{
+    "name": "sa/form-laravel-bridge",
+    "description": "Laravel implementation for symfony/form",
+    "type": "library",
+    "require": {
+        "laravel/framework": "^6.2",
+        "symfony/cache": "^5.0",
+        "symfony/form": "^5.0",
+        "symfony/security-csrf": "^5.0",
+        "symfony/validator": "^5.0",
+        "doctrine/annotations": "^1.10",
+        "doctrine/cache": "^1.10"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0 || ^5.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "authors": [
+        {
+            "name": "Alexey Shapilov",
+            "email": "shapilov@mail.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "SA\\Form\\": "src/"
+        },
+        "files": [
+            "src/form_functions.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SA\\Form\\Provider"
+            ]
+        }
+    }
+}
